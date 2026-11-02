@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Baldi Clone</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: white;
+    }
+
+    #player {
+      width: 50px;
+      height: 50px;
+      background: blue;
+      position: absolute;
+      top: 200px;
+      left: 200px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Baldi Clone</h1>
+
+<div id="player"></div>
+
+<script>
+let player = document.getElementById("player");
+let x = 200;
+let y = 200;
+
+document.addEventListener("keydown", e => {
+  if(e.key === "w") y -= 10;
+  if(e.key === "s") y += 10;
+  if(e.key === "a") x -= 10;
+  if(e.key === "d") x += 10;
+
+  player.style.left = x + "px";
+  player.style.top = y + "px";
+});
+</script>
+
+</body>
+</html>
